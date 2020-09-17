@@ -183,9 +183,6 @@ select::-ms-expand {
 	position: relative;
 	bottom: 15px;
 }
-.format-a label .icon-box:hover {
-	color: #24cfaa;
-}
 .format-a label input[type="checkbox"]:checked ~ .icon-box {
 	transition: 0.2s all linear;
 	box-shadow: inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
