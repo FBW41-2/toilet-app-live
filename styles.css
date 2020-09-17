@@ -158,7 +158,7 @@ select::-ms-expand {
 	margin: auto;
 
 	/* justify-content: space-around;
-	flex-direction: column; */
+	flex-direction: column;  */
 }
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
@@ -180,6 +180,11 @@ select::-ms-expand {
 	justify-content: space-around;
 	align-items: center;
 	box-shadow: 5px 5px 8px #cbced1, -5px -5px 8px #ffffff;
+	position: relative;
+	bottom: 15px;
+}
+.format-a label .icon-box:hover {
+	color: #24cfaa;
 }
 .format-a label input[type="checkbox"]:checked ~ .icon-box {
 	transition: 0.2s all linear;
