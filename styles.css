@@ -155,7 +155,14 @@ select::-ms-expand {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+
 }
+/*Features hover */
+.format-a label:hover .icon-box {
+	background-color: #24cfaa;
+  }
+  
+  /* end features */
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
 	width: 60px;
