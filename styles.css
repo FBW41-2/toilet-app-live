@@ -281,7 +281,7 @@ select::-ms-expand {
 	color: #ffff;
 }
 
-.format-a .tooltiptext {
+.icon-box .tooltiptext {
 	visibility: hidden;
 	width: 120px;
 	background-color: #555;
@@ -303,7 +303,7 @@ select::-ms-expand {
   }
   
   /* Tooltip arrow */
-  .format-a .tooltiptext::after {
+  .icon-box .tooltiptext::after {
 	content: "";
 	position: absolute;
 	top: 100%;
@@ -315,7 +315,7 @@ select::-ms-expand {
   }
   
   /* Show the tooltip text when you mouse over the tooltip container */
-  .format-a:hover .tooltiptext {
+  .icon-box:hover .tooltiptext {
 	visibility: visible;
 	opacity: 1;
   }
