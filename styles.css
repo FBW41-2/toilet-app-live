@@ -148,13 +148,14 @@ select::-ms-expand {
 }
 .format:nth-child(6) {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	height: 50px;
 }
 .format-a {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
