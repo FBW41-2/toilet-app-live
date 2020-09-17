@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  
   <meta charset="UTF-8" />
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
@@ -29,30 +30,13 @@
           <input type="text" name="zip" id="zip" class="user-input" placeholder="Zip Code" />
       </div>
 
-      <div class="format">
-        <i class="fas fa-house-user"></i>
-        <label for="streetnr"></label>
-        <input type="text" name="streetnr" id="streetnr" class="user-input" placeholder="House Nr" /></div>
-
-      <div class="format">
-        <i class="fas fa-street-view"></i>
-        <label for="name"></label>
-        <input type="text" name="name" id="name" class="user-input" placeholder="Location" /></div>
-
-      <div class="format">
-        <i class="fas fa-road"></i>
-        <label for="street"></label>
-        <input type="text" name="street" id="street" class="user-input" placeholder="Street" /></div>
+<!-- Rearranged input elements in logical order -->
 
       <div class="select">
-
         <label for="city"></label>
         <i class="fas fa-city"></i>
-
         <select required name="city" id="city">
-
           <option selected disabled>Choose a City</option>
-
           <option value="Berlin">Berlin</option>
           <option value="Düsseldorf">Düsseldorf</option>
           <option value="Hamburg">Hamburg</option>
@@ -67,8 +51,23 @@
           <option value="Hanover">Hanover</option>
           <option value="Dresden">Dresden</option>
         </select>
-
       </div>
+
+      <div class="format">
+        <i class="fas fa-road"></i>
+        <label for="street"></label>
+        <input type="text" name="street" id="street" class="user-input" placeholder="Street" />
+      </div>
+
+      <div class="format">
+        <i class="fas fa-house-user"></i>
+        <label for="streetnr"></label>
+        <input type="text" name="streetnr" id="streetnr" class="user-input" placeholder="House Nr." /></div>
+
+      <div class="format">
+        <i class="fas fa-street-view"></i>
+        <label for="name"></label>
+        <input type="text" name="name" id="name" class="user-input" placeholder="Additional location" /></div>
 
       <div class="format">
         <i class="fas fa-toilet"></i>
@@ -171,15 +170,18 @@
 
       </form>
     </div>
+
     <button type="submit" form="toilet" value="submit" class="signin-button">Create</button>
+    
     <div class="table">
       <a href="table.html">Toilets List <i class="fas fa-arrow-right"></i></a>
-
     </div>
 
   </div>
+
   <script src="https://kloapp.herokuapp.com/javascripts/pure.min.js"></script>
   <script src="https://kloapp.herokuapp.com/javascripts/render.js"></script>
+
 </body>
 
 </html>

@@ -5,6 +5,7 @@
 
 body {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin: 100px;
@@ -51,4 +52,23 @@ body {
 .content-table tbody tr.active-row {
 	font-weight: bold;
 	color: #009879;
+}
+
+.home-button {
+	padding: 16px 30px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 30px;
+	font-size: 15px;
+	font-weight: 700;
+	font-family: 'Lato', sans-serif;
+	background: #009879;
+	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+	transition: 0.5s;
+}
+
+.home-button a {
+	color: white;
+	text-decoration: none;
 }
