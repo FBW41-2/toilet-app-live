@@ -152,9 +152,9 @@ select::-ms-expand {
 	height: 50px;
 }
 .format-a {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
 }
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
