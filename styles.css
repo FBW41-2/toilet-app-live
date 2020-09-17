@@ -281,6 +281,11 @@ select::-ms-expand {
 	color: #ffff;
 }
 
+.icon-box {
+	position: relative;
+	display: inline-block;
+}
+
 .format-a .tooltiptext {
 	visibility: hidden;
 	width: 120px;
@@ -318,3 +323,4 @@ select::-ms-expand {
 	visibility: visible;
 	opacity: 1;
   }
+  
