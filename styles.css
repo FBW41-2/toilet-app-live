@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 }
+
 body {
 	margin: 0;
 	height: 180vh;
@@ -12,6 +13,7 @@ body {
 	color: #555;
 	background: #ecf0f3;
 }
+
 .login-div {
 	width: 430px;
 	height: 750px auto;
@@ -30,23 +32,31 @@ body {
 	background-size: 100%;
 	box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #ffffff;
 }
+
 .title {
 	text-align: center;
 	font-size: 28px;
 	padding-top: 24px;
 	letter-spacing: 0.5px;
 }
+
 .sub-title {
 	text-align: center;
 	font-size: 15px;
 	padding-top: 7px;
 	letter-spacing: 3px;
 }
+
 .fields {
 	width: 100%;
 	padding: 75px 5px 5px 5px;
 }
+
+/* Changed the width of input fields => */
+/*  =>   moved arrows to the right edge */
+
 .fields input {
+	width: 86%;
 	border: none;
 	outline: none;
 	background: none;
@@ -54,11 +64,13 @@ body {
 	color: #555;
 	padding: 20px 10px 20px 5px;
 }
+
 .format {
 	margin-bottom: 30px;
 	border-radius: 25px;
 	box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
 }
+
 .fields .format i {
 	height: 22px;
 	margin: 0 0 -3px 25px;
@@ -68,6 +80,7 @@ body {
 .format-a i {
 	font-size: 20px;
 }
+
 .signin-button {
 	outline: none;
 	border: none;
@@ -84,9 +97,11 @@ body {
 	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
 	transition: 0.5s;
 }
+
 .signin-button:hover {
 	background: #2fdbb6;
 }
+
 .signin-button:active {
 	background: #1da88a;
 }
@@ -111,14 +126,17 @@ select {
 	font-size: 1.2em;
 	font-family: 'Open Sans', sans-serif;
 }
+
 .select i {
 	margin-top: 15px;
 	margin-left: 20px;
 	color: #aaa;
 }
+
 select::-ms-expand {
 	display: none;
 }
+
 .select {
 	position: relative;
 	display: flex;
@@ -129,36 +147,45 @@ select::-ms-expand {
 	border-radius: 25px;
 	margin-bottom: 30px;
 }
+
+/* Moved an arrow a bit left to match the Stalls Selector */
+/*	position arrows  */
+
 .select::after {
 	content: '\25BC';
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 5px;
 	padding: 0 1em;
 	color: #24cfaa;
 	cursor: pointer;
 	pointer-events: none;
 	transition: .25s all ease;
 }
+
 .select:hover::after {
 	color: orangered;
 }
+
 .Features {
 	font-size: 20px;
 	margin-bottom: 20px;
 	margin-left: 15px;
 	color: #1da88a;
 }
+
 .format:nth-child(6) {
 	display: flex;
 	align-items: center;
 	height: 50px;
 }
+
 .format-a {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
 	width: 60px;
@@ -180,15 +207,18 @@ select::-ms-expand {
 	align-items: center;
 	box-shadow: 5px 5px 8px #cbced1, -5px -5px 8px #ffffff;
 }
-.format-a label input[type="checkbox"]:checked ~ .icon-box {
+
+.format-a label input[type="checkbox"]:checked~.icon-box {
 	transition: 0.2s all linear;
 	box-shadow: inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
 	color: #24cfaa;
 }
+
 .rating .fas {
 	margin-left: 13px;
 	transition: 0.2s linear;
 }
+
 .rating {
 	display: flex;
 	position: relative;
@@ -197,6 +227,7 @@ select::-ms-expand {
 	font-size: 50px;
 	margin-bottom: 30px;
 }
+
 .rating-n {
 	font-size: 20px;
 	margin-bottom: 15px;
@@ -253,15 +284,16 @@ select::-ms-expand {
 	text-shadow: 3px 3px 8px #cbced1, -3px -3px 8px #ffffff;
 }
 
-.rating:not(:hover) label input:checked ~ .fas,
-.rating:hover label:hover input ~ .fas {
+.rating:not(:hover) label input:checked~.fas,
+.rating:hover label:hover input~.fas {
 	color: #1eb494;
 }
 
-.rating label input:focus:not(:checked) ~ .fas:last-child {
+.rating label input:focus:not(:checked)~.fas:last-child {
 	color: #000;
 	text-shadow: 0 0 5px #1eb494;
 }
+
 .table {
 	margin: auto;
 	padding-top: 16px;
