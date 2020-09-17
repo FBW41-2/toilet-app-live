@@ -91,6 +91,9 @@ body {
 	background: #1da88a;
 }
 
+/* Made font in dropdown menu a bit bigger to match other inputs*/
+/* Changed the color in dropdown menu to match other inputs */
+
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -103,9 +106,9 @@ select {
 	background-image: none;
 	width: 100%;
 	padding-left: 10px;
-	color: #aaa;
+	color: #777;
 	cursor: pointer;
-	font-size: 1em;
+	font-size: 1.2em;
 	font-family: 'Open Sans', sans-serif;
 }
 .select i {
