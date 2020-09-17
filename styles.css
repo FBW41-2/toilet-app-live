@@ -281,21 +281,20 @@ select::-ms-expand {
 	color: #ffff;
 }
 
-.icon-box .tooltiptext {
+.format-a .tooltiptext {
 	visibility: hidden;
 	width: 120px;
-	background-color: #555;
-	color: #fff;
 	text-align: center;
 	padding: 5px 0;
 	border-radius: 6px;
   
 	/* Position the tooltip text */
 	position: absolute;
-	z-index: 1;
-	bottom: 125%;
-	left: 50%;
-	margin-left: -60px;
+	top: 30px;
+	z-index: 2;
+	/* bottom: 125%;
+	left: 50%; */
+	/* margin-left: -60px; */
   
 	/* Fade in tooltip */
 	opacity: 0;
@@ -303,19 +302,19 @@ select::-ms-expand {
   }
   
   /* Tooltip arrow */
-  .icon-box .tooltiptext::after {
+  .format-a .tooltiptext::after {
 	content: "";
 	position: absolute;
-	top: 100%;
+	/* top: 100%;
 	left: 50%;
-	margin-left: -5px;
+	margin-left: -5px; */
 	border-width: 5px;
 	border-style: solid;
 	border-color: #555 transparent transparent transparent;
   }
   
   /* Show the tooltip text when you mouse over the tooltip container */
-  .icon-box:hover .tooltiptext {
+  .format-a:hover .tooltiptext {
 	visibility: visible;
 	opacity: 1;
   }
