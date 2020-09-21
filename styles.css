@@ -185,9 +185,9 @@ select::-ms-expand {
 	grid-template-columns: 1fr 1fr;
 	width: 80%;
 	margin: 20px auto 0;
-
-	/* justify-content: space-around;
-	flex-direction: column;  */
+	position: relative;
+	right: 25px;
+	padding-top: 15px;
 }
 /*Features hover */
 .format-a label:hover .icon-box {
@@ -201,6 +201,7 @@ select::-ms-expand {
 	height: 60px;
 	opacity: 0;
 	position: absolute;
+	
 }
 
 /* Resizing the buttons, so that extra button fits */
@@ -333,4 +334,10 @@ select::-ms-expand {
 .icon-box {
 	position: relative;
 	display: inline-block;
+}
+
+/* fixing icon text  */
+
+.format-a label text {
+	
 }
