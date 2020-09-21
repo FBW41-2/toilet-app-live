@@ -194,7 +194,6 @@ select::-ms-expand {
 	background-color: #24cfaa;
   }
   
-  /* end features */
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
 	width: 60px;
@@ -341,5 +340,6 @@ select::-ms-expand {
 .format-a div label {
 	font: 400 13.3333px Arial;
 	font-size: 18px;
+	left: 20px;
 }
 
