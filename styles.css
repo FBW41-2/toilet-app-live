@@ -338,6 +338,8 @@ select::-ms-expand {
 
 /* fixing icon text  */
 
-.format-a label text {
-	
+.format-a div label {
+	font: 400 13.3333px Arial;
+	font-size: 18px;
 }
+
