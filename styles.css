@@ -225,6 +225,14 @@ select::-ms-expand {
 	color: #24cfaa;
 }
 
+.format-a div label {
+	font: 400 13.3333px Arial;
+	font-size: 18px;
+	left: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
 .rating .fas {
 	margin-left: 13px;
 	transition: 0.2s linear;
@@ -335,11 +343,5 @@ select::-ms-expand {
 	display: inline-block;
 }
 
-/* fixing icon text  */
 
-.format-a div label {
-	font: 400 13.3333px Arial;
-	font-size: 18px;
-	left: 20px;
-}
 
