@@ -155,7 +155,7 @@ select::-ms-expand {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	width: 80%;
-	margin: auto;
+	margin: 20px auto 0;
 
 	/* justify-content: space-around;
 	flex-direction: column;  */
