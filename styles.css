@@ -189,6 +189,9 @@ select::-ms-expand {
 .format-a label:hover .icon-box {
 	background-color: #24cfaa;
 }
+.format-a label input[type="checkbox"]:checked:hover ~ .icon-box {
+	color: #fff;
+}
 
 /* end features */
 .format-a label input[type="checkbox"] {
