@@ -1,208 +1,57 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  
-  <meta charset="UTF-8" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-
-  <!-- Adding a title -->
-
-  <title>Public toilets around you</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="table.css">
+    <title>Document</title>
 </head>
-
 <body>
-
-  <div class="login-div">
-
-    <div class="logo"></div>
-    <div class="title">Toilets</div>
-    <div class="sub-title">BETA Version By Jin</div>
-    <div class="fields">
-
-        <form action="https://kloapp.herokuapp.com/add" id="toilet" method="post">
-          <div class="format">
-          <i class="fas fa-mail-bulk"></i>
-          <label for="zip"></label>
-          <input type="text" name="zip" id="zip" class="user-input" placeholder="Zip Code" />
-        </div>
-
-<!-- Rearranged input elements in logical order -->
-
-      <div class="select">
-        <label for="city"></label>
-        <i class="fas fa-city"></i>
-        <select required name="city" id="city">
-          <option selected disabled>Choose a City</option>
-          <option value="Berlin">Berlin</option>
-          <option value="Düsseldorf">Düsseldorf</option>
-          <option value="Hamburg">Hamburg</option>
-          <option value="Köln">Köln</option>
-          <option value="Dortmund">Dortmund</option>
-          <option value="Münich">Münich</option>
-          <option value="Koblenz">Koblenz</option>
-          <option value="Leipzig">Leipzig</option>
-          <option value="Stuttgart">Stuttgart</option>
-          <option value="Bremen">Bremen</option>
-          <option value="Frankfurt">Frankfurt</option>
-          <option value="Hanover">Hanover</option>
-          <option value="Dresden">Dresden</option>
-        </select>
-      </div>
-
-      <div class="format">
-        <i class="fas fa-road"></i>
-        <label for="street"></label>
-        <input type="text" name="street" id="street" class="user-input" placeholder="Street" />
-      </div>
-
-      <div class="format">
-        <i class="fas fa-house-user"></i>
-        <label for="streetnr"></label>
-        <input type="text" name="streetnr" id="streetnr" class="user-input" placeholder="House Nr." /></div>
-
-      <div class="format">
-        <i class="fas fa-street-view"></i>
-        <label for="name"></label>
-        <input type="text" name="name" id="name" class="user-input" placeholder="Additional location" /></div>
-
-      <div class="format">
-        <i class="fas fa-toilet"></i>
-        <label for="stalls"></label>
-        <input type="number" name="stalls" id="stalls" min="1" class="user-input" placeholder="Number of Stalls" /></div>
-       <div class="Features">
-         <span>Features</span>
-       </div>
-       <div class="format-a">
-        
-        <div>
-        <label>        
-           <input type="checkbox" id="feat-mirror" name="feat-mirror">
-           <div class="icon-box">         
-            <i class="fas fa-square" aria-hidden="true"></i>
-          </div> 
-           </label>
-          </div>
-          <div class="label-group">
-            <label for="feat-mirror">Mirror</label>
-           </div>
-        <div>
-          <label>
-          <input type="checkbox" id="feat-papertowels" name="feat-papertowels">
-          <div class="icon-box">
-            <i class="fas fa-toilet-paper" aria-hidden="true"></i>
-          </div>
-        </label>
-      </div>
-      <div class="label-group">
-        <label for="feat-papertowels">Papertowels</label>
-       </div>
-<div>
-  <label>
-          <input type="checkbox" id="feat-perfume" name="feat-perfume">
-          <div class="icon-box">
-            <i class="fas fa-spray-can" aria-hidden="true"></i>
-          </div>
-        </label>
-      </div>
-      <div class="label-group">
-        <label for="feat-perfume"> Perfume</label>
-</div>
-      
-      <div>
-        <label>
-          <input type="checkbox" id="feat-access" name="feat-access">
-          <div class="icon-box">
-            <i class="fas fa-universal-access" aria-hidden="true"></i>
-          </div>
-        </label>
-      </div>
-      <div class="label-group">
-
-        <label for="feat-access">Accessibility</label>
-      </div>
-      <div>
-        <label>
-          <input type="checkbox" id="feat-soap" name="feat-soap">
-          <div class="icon-box">
-            <i class="fas fa-soap" aria-hidden="true"></i>
-          </div>
-        </label>
-      </div>
-      <div class="label-group">
-        <label for="feat-soap">Soap</label>
-      </div>
-<!-- Creating additional button for Baby-Changing-Table -->
-        <div>
-          <label>
-          <input type="checkbox" id="feat-baby" name="feat-baby">
-          <div class="icon-box">
-            <i class="fas fa-baby" aria-hidden="true"></i>
-          </div>
-        </label>
-</div>
-<div class="label-group">
-  <label for="feat-baby">Changing-Table
-    </label>
-  </div>
-
-      </div>
-
-      <div class="rating-n"><span>Rating</span></div>
-
-      <div class="rating">
-
-        <label>
-          <input type="radio" name="rating" value="1" />
-          <i class="fas fa-star"></i>
-        </label>
-
-        <label>
-          <input type="radio" name="rating" value="2" />
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </label>
-
-        <label>
-          <input type="radio" name="rating" value="3" />
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </label>
-
-        <label>
-          <input type="radio" name="rating" value="4" />
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </label>
-
-        <label>
-          <input type="radio" name="rating" value="5" />
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </label>
-
-      </div>
-
-      </form>
+    <div class="home-button">
+      <a href="index.html">Back to Home</a>
     </div>
-
-    <button type="submit" form="toilet" value="submit" class="signin-button">Create</button>
+  <table class="content-table" id="toilets-table">
+     
+    <thead>
+        <tr>
+            <th>City</th>
+            <th>Address</th>
+            <th>Location</th>
+            <th>Mirror</th>
+            <th>Paper towels</th>
+            <th>Perfume</th>
+            <th>Accessability</th>
+            <th>Soap</th>
+            <th>Changing table</th>
+            <th>Number of stalls</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
     
-    <div class="table">
-      <a href="table.html">Toilets List <i class="fas fa-arrow-right"></i></a>
-    </div>
+    <tbody>
+        <tr>
+            <td class="city"></td>
+            <td class="address"></td>
+            <td class="location"></td>
+            <td class="feat-mirror"></td>
+            <td class="feat-papertowels"></td>
+            <td class="feat-perfume"></td>
+            <td class="feat-access"></td>
+            <td class="feat-soap"></td>
+            <td class="feat-baby"></td>
+            <td class="stalls"></td>
+            <td class="rating"></td>
+            
+        </tr>
+    </tbody>
 
-  </div>
+    
 
+    
+    
+</table>
+
+<script src="https://kloapp.herokuapp.com/javascripts/pure.min.js"></script>
+<script src="https://kloapp.herokuapp.com/javascripts/render.js"></script>
 </body>
-
 </html>
