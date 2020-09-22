@@ -329,3 +329,6 @@ select::-ms-expand {
 .table i {
 	margin-left: 5px;
 }
+.table:hover {
+	background-color: #1da88a;
+}
