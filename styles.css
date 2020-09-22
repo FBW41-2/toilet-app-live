@@ -189,6 +189,7 @@ select::-ms-expand {
 	right: 25px;
 	padding-top: 15px;
 }
+
 /*Features hover */
 .format-a label:hover .icon-box {
 	background-color: #24cfaa;
@@ -231,7 +232,16 @@ select::-ms-expand {
 	left: 20px;
 	font-weight: bold;
 	cursor: pointer;
+	position: relative;
+	left: 10px;
 }
+
+/* styling features text closer to icons */ 
+.label-group {
+	position: relative;
+	right: 65px;
+}
+
 
 .rating .fas {
 	margin-left: 13px;
@@ -342,6 +352,3 @@ select::-ms-expand {
 	position: relative;
 	display: inline-block;
 }
-
-
-
