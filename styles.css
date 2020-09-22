@@ -203,6 +203,10 @@ select::-ms-expand {
 	color: #fff;
 }
 
+.format-a label input[type="checkbox"]:checked ~ .icon-box span {
+	color: #24cfaa;
+}
+
 /* end features */
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
@@ -228,9 +232,9 @@ select::-ms-expand {
 }
 
 .format-a label input[type="checkbox"]:checked ~ .icon-box {
+	color: #24cfaa;
 	transition: 0.2s all linear;
 	box-shadow: inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
-	
 }
 
 .rating .fas {
