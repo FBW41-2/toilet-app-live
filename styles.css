@@ -184,18 +184,16 @@ select::-ms-expand {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-
 }
 /*Features hover */
 .format-a label:hover .icon-box {
 	background-color: #24cfaa;
-	
-	
-	
-	
-  }
-  
-  /* end features */
+}
+.format-a label input[type="checkbox"]:checked:hover ~ .icon-box {
+	color: #fff;
+}
+
+/* end features */
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
 	width: 60px;
@@ -218,7 +216,7 @@ select::-ms-expand {
 	box-shadow: 5px 5px 8px #cbced1, -5px -5px 8px #ffffff;
 }
 
-.format-a label input[type="checkbox"]:checked~.icon-box {
+.format-a label input[type="checkbox"]:checked ~ .icon-box {
 	transition: 0.2s all linear;
 	box-shadow: inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
 	
@@ -294,27 +292,27 @@ select::-ms-expand {
 	text-shadow: 3px 3px 8px #cbced1, -3px -3px 8px #ffffff;
 }
 
-.rating:not(:hover) label input:checked~.fas,
-.rating:hover label:hover input~.fas {
+.rating:not(:hover) label input:checked ~ .fas,
+.rating:hover label:hover input ~ .fas {
 	color: #1eb494;
 }
 
-.rating label input:focus:not(:checked)~.fas:last-child {
+.rating label input:focus:not(:checked) ~ .fas:last-child {
 	color: #000;
 	text-shadow: 0 0 5px #1eb494;
 }
 
 .table {
 	margin: auto;
-	padding-top: 16px;
+	padding-top: 15px;
 	margin-top: 20px;
 	outline: none;
 	border: none;
 	cursor: pointer;
 	width: 50%;
-	height: 60px;
+	height: 50px;
 	border-radius: 30px;
-	font-size: 20px;
+	font-size: 17px;
 	font-weight: 700;
 	font-family: 'Lato', sans-serif;
 
@@ -327,4 +325,10 @@ select::-ms-expand {
 .table a {
 	text-decoration: none;
 	color: #ffff;
+}
+.table i {
+	margin-left: 5px;
+}
+.table:hover {
+	background-color: #1da88a;
 }
