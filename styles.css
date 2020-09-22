@@ -184,7 +184,20 @@ select::-ms-expand {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin-bottom: 30px;
 }
+
+.format-a span {
+	font-size: 11px;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.format-a label:hover span {
+	color: #2fdbb6;
+}
+
 /*Features hover */
 .format-a label:hover .icon-box {
 	background-color: #24cfaa;
@@ -197,7 +210,7 @@ select::-ms-expand {
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
 	width: 60px;
-	height: 60px;
+	height: 70px;
 	opacity: 0;
 	position: absolute;
 }
@@ -209,7 +222,6 @@ select::-ms-expand {
 	height: 50px;
 	color: rgb(129, 129, 129);
 	border-radius: 10px;
-	margin-bottom: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -219,6 +231,10 @@ select::-ms-expand {
 .format-a label input[type="checkbox"]:checked ~ .icon-box {
 	transition: 0.2s all linear;
 	box-shadow: inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
+	color: #24cfaa;
+}
+
+.format-a label input[type="checkbox"]:checked ~ span {
 	color: #24cfaa;
 }
 
