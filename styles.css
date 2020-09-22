@@ -220,10 +220,10 @@ select::-ms-expand {
 	bottom: 15px;
 }
 
-.format-a label input[type="checkbox"]:checked~.icon-box {
+.format-a label input[type="checkbox"]:checked ~ .icon-box {
 	transition: 0.2s all linear;
 	box-shadow: inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
-	color: #24cfaa;
+	
 }
 
 .format-a div label {
@@ -313,27 +313,27 @@ select::-ms-expand {
 	text-shadow: 3px 3px 8px #cbced1, -3px -3px 8px #ffffff;
 }
 
-.rating:not(:hover) label input:checked~.fas,
-.rating:hover label:hover input~.fas {
+.rating:not(:hover) label input:checked ~ .fas,
+.rating:hover label:hover input ~ .fas {
 	color: #1eb494;
 }
 
-.rating label input:focus:not(:checked)~.fas:last-child {
+.rating label input:focus:not(:checked) ~ .fas:last-child {
 	color: #000;
 	text-shadow: 0 0 5px #1eb494;
 }
 
 .table {
 	margin: auto;
-	padding-top: 16px;
+	padding-top: 15px;
 	margin-top: 20px;
 	outline: none;
 	border: none;
 	cursor: pointer;
 	width: 50%;
-	height: 60px;
+	height: 50px;
 	border-radius: 30px;
-	font-size: 20px;
+	font-size: 17px;
 	font-weight: 700;
 	font-family: 'Lato', sans-serif;
 
