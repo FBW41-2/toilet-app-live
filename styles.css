@@ -184,7 +184,7 @@ select::-ms-expand {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	width: 50%;
+	width: 25%;
 	margin-left: 20px;
 	margin-bottom: 30px;
 }
@@ -210,7 +210,7 @@ select::-ms-expand {
 /* end features */
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
-	width: 120px;
+	width: 130px;
 	height: 60px;
 	opacity: 0;
 	position: absolute;
