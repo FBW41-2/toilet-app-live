@@ -167,6 +167,10 @@ select::-ms-expand {
 	color: orangered;
 }
 
+select:invalid {
+	color: #a7aaaf;
+}
+
 .Features {
 	font-size: 20px;
 	margin-bottom: 20px;
