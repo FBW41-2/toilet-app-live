@@ -4,7 +4,7 @@
 
 body {
 	margin: 0;
-	height: 180vh;
+	height: 230vh;
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	display: flex;
@@ -182,13 +182,35 @@ select::-ms-expand {
 
 .format-a {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	flex-wrap: wrap;
+	width: 25%;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+.icon-box span {
+	margin-left: 30px;
+}
+/*Features hover */
+.format-a label:hover .icon-box {
+	background-color: #24cfaa;
+}
+.format-a label:hover .icon-box span {
+	color: #24cfaa;
 }
 
+.format-a label input[type="checkbox"]:checked:hover ~ .icon-box {
+	color: #fff;
+}
+
+.format-a label input[type="checkbox"]:checked ~ .icon-box span {
+	color: #24cfaa;
+}
+
+/* end features */
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
-	width: 60px;
+	width: 130px;
 	height: 60px;
 	opacity: 0;
 	position: absolute;
@@ -201,17 +223,18 @@ select::-ms-expand {
 	height: 50px;
 	color: rgb(129, 129, 129);
 	border-radius: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
+	padding-left: 15px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	box-shadow: 5px 5px 8px #cbced1, -5px -5px 8px #ffffff;
 }
 
-.format-a label input[type="checkbox"]:checked~.icon-box {
+.format-a label input[type="checkbox"]:checked ~ .icon-box {
+	color: #24cfaa;
 	transition: 0.2s all linear;
 	box-shadow: inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
-	color: #24cfaa;
 }
 
 .rating .fas {
@@ -284,27 +307,27 @@ select::-ms-expand {
 	text-shadow: 3px 3px 8px #cbced1, -3px -3px 8px #ffffff;
 }
 
-.rating:not(:hover) label input:checked~.fas,
-.rating:hover label:hover input~.fas {
+.rating:not(:hover) label input:checked ~ .fas,
+.rating:hover label:hover input ~ .fas {
 	color: #1eb494;
 }
 
-.rating label input:focus:not(:checked)~.fas:last-child {
+.rating label input:focus:not(:checked) ~ .fas:last-child {
 	color: #000;
 	text-shadow: 0 0 5px #1eb494;
 }
 
 .table {
 	margin: auto;
-	padding-top: 16px;
+	padding-top: 15px;
 	margin-top: 20px;
 	outline: none;
 	border: none;
 	cursor: pointer;
 	width: 50%;
-	height: 60px;
+	height: 50px;
 	border-radius: 30px;
-	font-size: 20px;
+	font-size: 17px;
 	font-weight: 700;
 	font-family: 'Lato', sans-serif;
 
@@ -317,4 +340,10 @@ select::-ms-expand {
 .table a {
 	text-decoration: none;
 	color: #ffff;
+}
+.table i {
+	margin-left: 5px;
+}
+.table:hover {
+	background-color: #1da88a;
 }
