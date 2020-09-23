@@ -4,7 +4,7 @@
 
 body {
 	margin: 0;
-	height: 180vh;
+	height: 230vh;
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	display: flex;
@@ -181,27 +181,39 @@ select::-ms-expand {
 }
 
 .format-a {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	width: 80%;
-	margin: 20px auto 0;
-	position: relative;
-	right: 25px;
-	padding-top: 15px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 25%;
+	margin-left: 20px;
+	margin-bottom: 30px;
 }
-
+.icon-box span {
+	margin-left: 30px;
+}
 /*Features hover */
 .format-a label:hover .icon-box {
 	background-color: #24cfaa;
-  }
-  
+}
+.format-a label:hover .icon-box span {
+	color: #24cfaa;
+}
+
+.format-a label input[type="checkbox"]:checked:hover ~ .icon-box {
+	color: #fff;
+}
+
+.format-a label input[type="checkbox"]:checked ~ .icon-box span {
+	color: #24cfaa;
+}
+
+/* end features */
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
-	width: 60px;
+	width: 130px;
 	height: 60px;
 	opacity: 0;
 	position: absolute;
-	
 }
 
 /* Resizing the buttons, so that extra button fits */
@@ -211,37 +223,19 @@ select::-ms-expand {
 	height: 50px;
 	color: rgb(129, 129, 129);
 	border-radius: 10px;
-	margin-bottom: 30px;
-	display: inline-flex;
-	justify-content: space-around;
+	margin-bottom: 15px;
+	padding-left: 15px;
+	display: flex;
+	justify-content: flex-start;
 	align-items: center;
 	box-shadow: 5px 5px 8px #cbced1, -5px -5px 8px #ffffff;
-	position: relative;
-	bottom: 15px;
 }
 
 .format-a label input[type="checkbox"]:checked ~ .icon-box {
+	color: #24cfaa;
 	transition: 0.2s all linear;
 	box-shadow: inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
-	
 }
-
-.format-a div label {
-	font: 400 13.3333px Arial;
-	font-size: 18px;
-	left: 20px;
-	font-weight: bold;
-	cursor: pointer;
-	position: relative;
-	left: 10px;
-}
-
-/* styling features text closer to icons */ 
-.label-group {
-	position: relative;
-	right: 65px;
-}
-
 
 .rating .fas {
 	margin-left: 13px;
@@ -347,8 +341,9 @@ select::-ms-expand {
 	text-decoration: none;
 	color: #ffff;
 }
-
-.icon-box {
-	position: relative;
-	display: inline-block;
+.table i {
+	margin-left: 5px;
+}
+.table:hover {
+	background-color: #1da88a;
 }
