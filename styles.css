@@ -3,19 +3,18 @@
 }
 
 body {
-	margin: 0;
-	height: 230vh;
+	margin: 50px;
+	display: flex;
+	justify-content: space-around;
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	color: #555;
 	background: #ecf0f3;
 }
 
 .login-div {
-	width: 430px;
+	position: relative;
+	width: 800px;
 	height: 750px auto;
 	padding: 60px 35px 35px 35px;
 	border-radius: 40px;
@@ -86,7 +85,7 @@ body {
 	border: none;
 	cursor: pointer;
 	width: 100%;
-	height: 60px;
+	height: 40px;
 	border-radius: 30px;
 	font-size: 20px;
 	font-weight: 700;
@@ -183,6 +182,10 @@ select:invalid {
 	align-items: center;
 	height: 50px;
 }
+.format {
+	display: flex;
+	align-items: center;
+}
 
 .format-a {
 	display: flex;
@@ -190,7 +193,7 @@ select:invalid {
 	flex-wrap: wrap;
 	width: 25%;
 	margin-left: 20px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .icon-box span {
 	margin-left: 30px;
@@ -322,20 +325,20 @@ select:invalid {
 }
 
 .table {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: auto;
-	padding-top: 15px;
-	margin-top: 20px;
+	margin-top: 10px;
 	outline: none;
 	border: none;
 	cursor: pointer;
 	width: 50%;
-	height: 50px;
+	height: 40px;
 	border-radius: 30px;
-	font-size: 17px;
+	font-size: 16px;
 	font-weight: 700;
 	font-family: 'Lato', sans-serif;
-
-	text-align: center;
 	background: #24cfaa;
 	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
 	transition: 0.5s;
@@ -350,4 +353,11 @@ select:invalid {
 }
 .table:hover {
 	background-color: #1da88a;
+}
+
+.pages {
+	display: flex;
+	justify-content: space-around;
+
+	flex-wrap: wrap;
 }
