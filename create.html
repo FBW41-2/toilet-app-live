@@ -27,16 +27,16 @@
         <form action="https://kloapp.herokuapp.com/add" id="toilet" method="post">
           <i class="fas fa-mail-bulk"></i>
           <label for="zip"></label>
-          <input type="text" name="zip" id="zip" class="user-input" placeholder="Zip Code" />
+          <input type="text" name="zip" id="zip" class="user-input" placeholder="Zip Code" / required>
       </div>
 
 <!-- Rearranged input elements in logical order -->
 
-      <div class="select">
+      <div class="select" >
         <label for="city"></label>
         <i class="fas fa-city"></i>
-        <select required name="city" id="city">
-          <option selected disabled>Choose a City</option>
+        <select name="city" id="city" required>
+          <option value="">Choose a City</option>
           <option value="Berlin">Berlin</option>
           <option value="Düsseldorf">Düsseldorf</option>
           <option value="Hamburg">Hamburg</option>
@@ -56,13 +56,13 @@
       <div class="format">
         <i class="fas fa-road"></i>
         <label for="street"></label>
-        <input type="text" name="street" id="street" class="user-input" placeholder="Street" />
+        <input type="text" name="street" id="street" class="user-input" placeholder="Street" / required>
       </div>
 
       <div class="format">
         <i class="fas fa-house-user"></i>
         <label for="streetnr"></label>
-        <input type="text" name="streetnr" id="streetnr" class="user-input" placeholder="House Nr." /></div>
+        <input type="text" name="streetnr" id="streetnr" class="user-input" placeholder="House Nr." / required></div>
 
       <div class="format">
         <i class="fas fa-street-view"></i>
