@@ -181,25 +181,27 @@ select::-ms-expand {
 }
 
 .format-a {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 80%;
+	margin: 20px auto 0;
+	position: relative;
+	right: 25px;
+	padding-top: 15px;
 }
+
 /*Features hover */
 .format-a label:hover .icon-box {
 	background-color: #24cfaa;
-}
-.format-a label input[type="checkbox"]:checked:hover ~ .icon-box {
-	color: #fff;
-}
-
-/* end features */
+  }
+  
 .format-a label input[type="checkbox"] {
 	cursor: pointer;
 	width: 60px;
 	height: 60px;
 	opacity: 0;
 	position: absolute;
+	
 }
 
 /* Resizing the buttons, so that extra button fits */
@@ -210,10 +212,12 @@ select::-ms-expand {
 	color: rgb(129, 129, 129);
 	border-radius: 10px;
 	margin-bottom: 30px;
-	display: flex;
-	justify-content: center;
+	display: inline-flex;
+	justify-content: space-around;
 	align-items: center;
 	box-shadow: 5px 5px 8px #cbced1, -5px -5px 8px #ffffff;
+	position: relative;
+	bottom: 15px;
 }
 
 .format-a label input[type="checkbox"]:checked ~ .icon-box {
@@ -221,6 +225,23 @@ select::-ms-expand {
 	box-shadow: inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
 	
 }
+
+.format-a div label {
+	font: 400 13.3333px Arial;
+	font-size: 18px;
+	left: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	position: relative;
+	left: 10px;
+}
+
+/* styling features text closer to icons */ 
+.label-group {
+	position: relative;
+	right: 65px;
+}
+
 
 .rating .fas {
 	margin-left: 13px;
@@ -326,9 +347,8 @@ select::-ms-expand {
 	text-decoration: none;
 	color: #ffff;
 }
-.table i {
-	margin-left: 5px;
-}
-.table:hover {
-	background-color: #1da88a;
+
+.icon-box {
+	position: relative;
+	display: inline-block;
 }
