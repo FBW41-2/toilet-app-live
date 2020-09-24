@@ -17,14 +17,24 @@
 <body>
 
   <div class="login-div">
+      <div class="nav">
+          <div class="logo"></div>
 
-    <div class="logo"></div>
-    <div class="title">Toilets</div>
-    <div class="sub-title">BETA Version By Jin</div>
+          <div class="nav-title">
+          <div class="title">Toilets</div>
+          <div class="sub-title">BETA Version By Jin</div>
+        </div>
+      </div>
     <div class="fields">
 
-      <div class="format">
+     
+      <div class="page page-a">
+
+
         <form action="https://kloapp.herokuapp.com/add" id="toilet" method="post">
+
+      
+          <div class="format">
           <i class="fas fa-mail-bulk"></i>
           <label for="zip"></label>
           <input type="text" name="zip" id="zip" class="user-input" placeholder="Zip Code" / required>
@@ -80,6 +90,10 @@
         <label for="feat-access"></label>
         <input type="text" name="feat-access" id="feat-access" class="user-input" placeholder="Access" />
       </div>
+
+    </div>
+
+    <div class="page-b">
 
       <div class="Features">
         <span>Features</span>
@@ -167,15 +181,18 @@
         </label>
 
       </div>
-
+      <button type="submit" form="toilet" value="submit" class="signin-button">Create</button>
+      <div class="table">
+        <a href="/">Toilets List <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  
       </form>
     </div>
 
-    <button type="submit" form="toilet" value="submit" class="signin-button">Create</button>
+   
     
-    <div class="table">
-      <a href="/">Toilets List <i class="fas fa-arrow-right"></i></a>
-    </div>
+    
 
   </div>
 
