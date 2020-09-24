@@ -1,4 +1,6 @@
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -52,10 +54,8 @@ body {
 }
 
 .fields {
-	width: 100%;
 	margin-top: 60px;
 	display: flex;
-	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
@@ -67,7 +67,7 @@ body {
 /*  =>   moved arrows to the right edge */
 
 .fields input {
-	width: 86%;
+	width: 100%;
 	border: none;
 	outline: none;
 	background: none;
@@ -187,6 +187,7 @@ select:invalid {
 	margin-bottom: 20px;
 	margin-left: 15px;
 	color: #1da88a;
+	letter-spacing: 0.7px;
 }
 
 .format:nth-child(6) {
@@ -275,6 +276,7 @@ select:invalid {
 	margin-bottom: 15px;
 	margin-left: 20px;
 	color: #1eb494;
+	letter-spacing: 0.7px;
 }
 
 .rating label {
@@ -340,7 +342,7 @@ select:invalid {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: auto;
+	margin: 0 auto;
 	margin-top: 10px;
 	outline: none;
 	border: none;
@@ -365,4 +367,27 @@ select:invalid {
 }
 .table:hover {
 	background-color: #1da88a;
+}
+
+@media only screen and (max-width: 600px) {
+	.login-div {
+		box-shadow: none;
+	}
+	.format {
+		width: 400px;
+	}
+	.page-b {
+		margin-left: 0;
+		width: 400px;
+	}
+	.signin-button {
+		margin-left: 0;
+		height: 50px;
+		width: 100%;
+	}
+	.title::after {
+		content: 'Mobile';
+		font-size: 11px;
+		margin-left: 7px;
+	}
 }
