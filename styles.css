@@ -1,4 +1,6 @@
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -28,7 +30,7 @@ body {
 .nav-title {
 	display: flex;
 	flex-direction: column;
-	margin-left: 50px;
+	margin-left: 30px;
 }
 
 .logo {
@@ -52,10 +54,10 @@ body {
 }
 
 .fields {
-	width: 100%;
 	margin-top: 60px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+
 	flex-wrap: wrap;
 }
 
@@ -67,13 +69,12 @@ body {
 /*  =>   moved arrows to the right edge */
 
 .fields input {
-	width: 86%;
 	border: none;
 	outline: none;
 	background: none;
 	font-size: 18px;
 	color: #555;
-	padding: 20px 10px 20px 5px;
+	padding: 20px 30px 20px 30px;
 }
 
 .format {
@@ -132,10 +133,9 @@ select {
 	background: none;
 	background-image: none;
 	width: 100%;
-
 	color: #777;
 	cursor: pointer;
-	font-size: 1.2em;
+	font-size: 1.0em;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -187,6 +187,7 @@ select:invalid {
 	margin-bottom: 20px;
 	margin-left: 15px;
 	color: #1da88a;
+	letter-spacing: 0.7px;
 }
 
 .format:nth-child(6) {
@@ -275,6 +276,7 @@ select:invalid {
 	margin-bottom: 15px;
 	margin-left: 20px;
 	color: #1eb494;
+	letter-spacing: 0.7px;
 }
 
 .rating label {
@@ -340,7 +342,7 @@ select:invalid {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: auto;
+	margin: 0 auto;
 	margin-top: 10px;
 	outline: none;
 	border: none;
@@ -365,4 +367,31 @@ select:invalid {
 }
 .table:hover {
 	background-color: #1da88a;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		margin: 0 auto;
+	}
+	.login-div {
+		box-shadow: none;
+	}
+	.format {
+	}
+	.page-b {
+		margin-left: 0;
+	}
+	.signin-button {
+		margin-left: 0;
+		height: 50px;
+		width: 100%;
+	}
+	.title::after {
+		content: 'Mobile';
+		font-size: 11px;
+		margin-left: 7px;
+	}
+	.rating {
+		font-size: 40px;
+	}
 }
