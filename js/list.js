@@ -24,11 +24,16 @@ async function getToilets() {
                     <h2>${iterator}</h2>`
             for (let i = 0; i < list.length; i++) {
                 if (list[i].city === iterator) {
-                    html += `<p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
+                    
+                    html += `
+                        <div class="card_item">
+                            <p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
                             <p></p>
-                            </div>`;
+                        </div>
+                        `;
                 }
             }
+            html += `</div>`
             
         }
         
