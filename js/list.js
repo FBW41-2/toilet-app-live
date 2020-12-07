@@ -23,7 +23,7 @@ async function getToilets() {
                 <div class="card">
                     <div class="card-body">
                                 <h5 class="card-title">${list[i].city}</h5>
-                                    <p class="card-text">${list[i].street} ${list[i].name}.</p>
+                                    <p class="card-text">${list[i].street}, ${list[i].name}.</p>
                                         <a href="#" class="btn btn-primary">More info.</a>
                         </div>
                     </div>
