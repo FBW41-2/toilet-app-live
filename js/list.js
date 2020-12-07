@@ -18,8 +18,8 @@ async function getToilets() {
         for (let i = 0; i < list.length; i++) {
             html += `
             <div class="container-fluid">
-            <div class="row row-tols-3 p-3">
-            <div class="col-sm-6">
+            <div class="row p-3">
+            <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
                                 <h5 class="card-title">${list[i].city}</h5>
@@ -39,3 +39,4 @@ async function getToilets() {
         alert("List loading Error: " + response.status + " " + response.statusText + " " + response.url);
     }
 }
+

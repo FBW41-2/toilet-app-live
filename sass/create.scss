@@ -305,9 +305,9 @@ select::-ms-expand {
 	letter-spacing: 0.7px;
 }
 .table {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: grid; // changed from flex
+	// justify-content: center;
+	// align-items: center;
 	margin: 0 auto;
 	margin-top: 10px;
 	outline: none;
