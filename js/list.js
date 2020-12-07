@@ -18,22 +18,25 @@ async function getToilets() {
         for (let i = 0; i < list.length; i++) {
             citySet.add(list[i].city);
         }
+        console.log(list)
         for (const iterator of citySet) {
             console.log(iterator)
             html += `<div class="card">
-                    <h2>${iterator}</h2>`
+                    <h2>${iterator}</h2>
+                    <div class="flex">`
             for (let i = 0; i < list.length; i++) {
                 if (list[i].city === iterator) {
-                    
+                    let mirror;
+                    list[i]["feat-mirror"] === "on" ? mirror = true : mirror = false
                     html += `
                         <div class="card_item">
                             <p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
-                            <p></p>
+                            <p>${mirror}</p>
                         </div>
                         `;
                 }
             }
-            html += `</div>`
+            html += `</div></div>`
             
         }
         

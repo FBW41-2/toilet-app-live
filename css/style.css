@@ -5,14 +5,20 @@
   box-sizing: border-box;
 }
 
-.card {
-  margin: 20px;
-  padding: 20px;
+h2 {
+  text-align: center;
+  margin-top: 30px;
 }
 
-.card_item {
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.flex .card_item {
   margin: 20px;
   padding: 20px;
+  background: white;
+  border-radius: 5px;
 }
 
 table-div {
