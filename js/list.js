@@ -14,15 +14,28 @@ async function getToilets() {
         
         // add your code here
         let html = "";
+        let citySet = new Set;
         for (let i = 0; i < list.length; i++) {
             console.log(list[i]);
-            html += `<div class="card">
-                    <h2>${list[i]["city"]}</h2>
-                    <p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
-                    <p></p>
-                    </div>`;
-            
+            citySet.add(list[i].city);
         }
+        for (const iterator of citySet) {
+            console.log(iterator)
+            for (let i = 0; i < list.length; i++) {
+            
+            
+            
+            
+            }
+            // html += `<div class="card">
+            //     <h2>${list[i]["city"]}</h2>
+            //     <h2>${list[i]["city"]}</h2>
+            //     <p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
+            //     <p></p>
+            //     </div>`;
+        }
+        
+        
         // const html = `<div class="card"><h2>${JSON.stringify(list)}</h2></div>`
 
         // insert your html into referenced div
