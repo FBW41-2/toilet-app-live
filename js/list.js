@@ -13,7 +13,17 @@ async function getToilets() {
         const listDIV = document.getElementById("list")
         
         // add your code here
-        const html = `<div class="card"><h2>test</h2></div>`
+        let html = "";
+        for (let i = 0; i < list.length; i++) {
+            console.log(list[i]);
+            html += `<div class="card">
+                    <h2>${list[i]["city"]}</h2>
+                    <p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
+                    <p></p>
+                    </div>`;
+            
+        }
+        // const html = `<div class="card"><h2>${JSON.stringify(list)}</h2></div>`
 
         // insert your html into referenced div
         listDIV.innerHTML = html
