@@ -26,11 +26,17 @@ async function getToilets() {
             <li> Available number of Stalls: ${list[i].stalls} </li>
             
             <li>Rating: ${list[i].rating}</li>
-            <li></li>
+            <li>Here you can get
+            <ul class= "list-unstyled">
+            <li>Accessibility: ${list[i]["feat-access"]}</li>
+            <li>Mirror: ${list[i]["feat-mirror"]}</li>
+            <li>Changing table: ${list[i]["feat-baby"]}</li>
+            <li>Perfume: ${list[i]["feat-perfume"]}</li>
+            <li>Paper towels: ${list[i]["feat-papertowels"]}</li>
+            </ul></li>
             
             
             </ul>
-            <a href="#" class="btn btn-secondary">Check on the Map</a>
           </div>
         </div>`;
     }
