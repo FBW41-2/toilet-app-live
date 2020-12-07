@@ -8,9 +8,15 @@ async function getToilets() {
     if (response.ok) {
         // converting from json to array, will wait until conversion is finished
         let list = await response.json()
-        // add your code here
+
+        // get reference to <div id="list">
         const listDIV = document.getElementById("list")
-        listDIV.innerHTML = JSON.stringify(list)
+        
+        // add your code here
+        const html = `<div class="card"><h2>test</h2></div>`
+
+        // insert your html into referenced div
+        listDIV.innerHTML = html
 
     } else {
         alert("List loading Error: " + response.status + " " + response.statusText + " " + response.url)
