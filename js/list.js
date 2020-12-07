@@ -18,17 +18,24 @@ async function getToilets() {
         for (let i = 0; i < list.length; i++) {
             html += `
             <div class="container-fluid">
-            <div class="row p-3">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                                <h5 class="card-title">${list[i].city}</h5>
-                                    <p class="card-text">${list[i].street}, ${list[i].name}.</p>
-                                        <a href="#" class="btn btn-primary">More info.</a>
+                <div class="row p-3">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="card-title">${list[i].city}</h2>
+                                    <p class="card-text">${list[i].name}, ${list[i].street} ${list[i].zip}.</p>
+                                    <div id="myButton" class="container">
+                                    <li>${list[i]["feat-access"]}</li>
+                                    <li>${list[i]["feat-mirror"]}</li>
+                                    <li>${list[i]["feat-perfume"]}</li>
+                                    <li>${list[i].rating}</li>
+                                    <li>${list[i].stalls}</li>
+                                    </div>
+                                    <a href="#" class="btn btn-primary" onclick="myFunction()">Click to see features</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         `
         }
@@ -39,4 +46,14 @@ async function getToilets() {
         alert("List loading Error: " + response.status + " " + response.statusText + " " + response.url);
     }
 }
+
+// setting hidden button
+function myFunction() {
+    var x = document.getElementById("myButton");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
