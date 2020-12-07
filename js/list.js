@@ -16,23 +16,24 @@ async function getToilets() {
         let html = "";
         let citySet = new Set;
         for (let i = 0; i < list.length; i++) {
-            console.log(list[i]);
             citySet.add(list[i].city);
         }
         for (const iterator of citySet) {
             console.log(iterator)
             for (let i = 0; i < list.length; i++) {
-            
+                html += `<div class="card">`
+                if (list[i].city === iterator) {
+                    html += `<div class="card">
+                                <h2>${list[i]["city"]}</h2>
+                                <p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
+                                <p></p>
+                            </div>`;
+                }
             
             
             
             }
-            // html += `<div class="card">
-            //     <h2>${list[i]["city"]}</h2>
-            //     <h2>${list[i]["city"]}</h2>
-            //     <p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
-            //     <p></p>
-            //     </div>`;
+            
         }
         
         
