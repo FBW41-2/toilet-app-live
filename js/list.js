@@ -17,7 +17,7 @@ async function getToilets() {
 
     for (i = 0; i < list.length; i++) {
       console.log(list[i]);
-      html += `<div class="card, mt-1" style="width: 18rem">
+      html += `<div class="card mt-3 p-2 border border-dark rounded" style="width: 18rem">
           <div class="card-body">
             <h5 class="card-title text-center">WC in ${list[i].city}</h5>
             <ul class= "list-unstyled">
@@ -26,7 +26,7 @@ async function getToilets() {
             <li> Available number of Stalls: ${list[i].stalls} </li>
             
             <li>Rating: ${list[i].rating}</li>
-            <li>Here you can get
+            <li>Features:
             <ul class= "list-unstyled">
             <li>Accessibility: ${list[i]["feat-access"]}</li>
             <li>Mirror: ${list[i]["feat-mirror"]}</li>
