@@ -20,24 +20,18 @@ async function getToilets() {
         }
         for (const iterator of citySet) {
             console.log(iterator)
+            html += `<div class="card">
+                    <h2>${iterator}</h2>`
             for (let i = 0; i < list.length; i++) {
-                html += `<div class="card">`
                 if (list[i].city === iterator) {
-                    html += `<div class="card">
-                                <h2>${list[i]["city"]}</h2>
-                                <p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
-                                <p></p>
+                    html += `<p>${list[i]["zip"]}, ${list[i]["street"]}, ${list[i]["streetnr"]}</p>
+                            <p></p>
                             </div>`;
                 }
-            
-            
-            
             }
             
         }
         
-        
-        // const html = `<div class="card"><h2>${JSON.stringify(list)}</h2></div>`
 
         // insert your html into referenced div
         listDIV.innerHTML = html
