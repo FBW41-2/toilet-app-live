@@ -24,12 +24,12 @@ async function getToilets() {
                             <div class="card-body">
                                 <h2 class="card-title">${list[i].city}</h2>
                                     <p class="card-text">${list[i].name}, ${list[i].street} ${list[i].zip}.</p>
-                                    <div id="myButton" class="container">
-                                    <li>${list[i]["feat-access"]}</li>
-                                    <li>${list[i]["feat-mirror"]}</li>
-                                    <li>${list[i]["feat-perfume"]}</li>
-                                    <li>${list[i].rating}</li>
-                                    <li>${list[i].stalls}</li>
+                                    <div id="myButton">
+                                        <li>${list[i]["feat-access"]}</li>
+                                        <li>${list[i]["feat-mirror"]}</li>
+                                        <li>${list[i]["feat-perfume"]}</li>
+                                        <li>${list[i].rating}</li>
+                                        <li>${list[i].stalls}</li>
                                     </div>
                                     <a href="#" class="btn btn-primary" onclick="myFunction()">Click to see features</a>
                             </div>
@@ -47,7 +47,7 @@ async function getToilets() {
     }
 }
 
-// setting hidden button
+// setting hide-button
 function myFunction() {
     var x = document.getElementById("myButton");
     if (x.style.display === "none") {
@@ -55,5 +55,5 @@ function myFunction() {
     } else {
       x.style.display = "none";
     }
-  }
+}
 
