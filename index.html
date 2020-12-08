@@ -1,58 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="table-div">
-    <div class="home-button">
-      <a href="create.html">Add a toilet</a>
+      <div class="home-button">
+        <a href="create.html">Add a toilet</a>
+      </div>
+      <div id="list"></div>
     </div>
-  <table class="content-table" id="toilets-table">
-     <div class="table-card">
-    <thead>
-        <tr>
-            <th>City</th>
-            <th>Address</th>
-            <th>Location</th>
-            <th>Mirror</th>
-            <th>Paper towels</th>
-            <th>Perfume</th>
-            <th>Accessability</th>
-            <th>Soap</th>
-            <th>Changing table</th>
-            <th>Number of stalls</th>
-            <th>Rating</th>
-        </tr>
-    </thead>
-    
-    <tbody>
-        <tr>
-            <td class="city"></td>
-            <td class="address"></td>
-            <td class="location"></td>
-            <td class="feat-mirror"></td>
-            <td class="feat-papertowels"></td>
-            <td class="feat-perfume"></td>
-            <td class="feat-access"></td>
-            <td class="feat-soap"></td>
-            <td class="feat-baby"></td>
-            <td class="stalls"></td>
-            <td class="rating"></td>
-            
-        </tr>
-    </tbody>
-
-    
-
-    
-</div>
-</table>
-</div>
-<script src="https://kloapp.herokuapp.com/javascripts/pure.min.js"></script>
-<script src="https://kloapp.herokuapp.com/javascripts/render.js"></script>
-</body>
+    <script src="https://kloapp.herokuapp.com/javascripts/pure.min.js"></script>
+    <script src="js/list.js"></script>
+  </body>
 </html>
