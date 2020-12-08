@@ -41,15 +41,17 @@ function entry({name, city, zip, street, streetnr:nr, stalls, ['feat-access']:ac
         <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
             <div class="inner">
                 <p>${city}</p>
-  <span>Hover For InFo</span>
+                <div class="card">Zip:  ${zip}</div>
+            <div class="card">Address : ${street} </div>
+            <div class="card">Street Nur: ${nr}</div>
+            <div class="card">Location : ${name}</div> 
+  <span>Click For InFo</span>
             </div>
         </div>
         <div class="back">
             <div class="inner">
-            <div class="card">Zip:  ${zip}</div>
-            <div class="card">Address : ${street} </div>
-            <div class="card">Street Nur: ${nr}</div>
-            <div class="card">Location : ${name}</div> 
+            
+            
             <div class="card">Access : ${access}</div>
             <div class="card">Stalls : ${stalls}</div>
             ${featString}
