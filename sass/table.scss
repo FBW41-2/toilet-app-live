@@ -15,6 +15,18 @@ $font_3: Verdana;
 $font_4: sans-serif;
 $font_5: Lato;
 
+
+$color_royal_purple_approx: rebeccapurple;
+$black_25: rgba(0,0,0,0.25);
+$white: #fff;
+$color_botticelli_approx: #cedce7;
+$color_nevada_approx: #596a72;
+$black: #000;
+$white_70: rgba(255,255,255,0.7);
+
+//fonts
+$font_0: Montserrat;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -68,6 +80,7 @@ table-div {
 }
 .home-button {
 	margin: auto;
+	margin-top: 50px;
 	text-align: center;
 	width: 200px;
 	padding: 16px 30px;
@@ -87,5 +100,180 @@ table-div {
 	}
 	&:hover {
 		background-color: $color_shamrock_approx;
+	}
+}
+
+//colors
+
+
+//@extend-elements
+//original selectors
+//.front, .back
+%extend_1 {
+	background-size: cover;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 4px 8px 0 $black_25;
+	background-position: center;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	//Instead of the line below you could use @include backface-visibility($visibility)
+	backface-visibility: hidden;
+	text-align: center;
+	min-height: 280px;
+	height: auto;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px;
+	color: $white;
+}
+
+.title_cards{
+	font-size: 2.5rem;
+	font-family: 'Montserrat';
+	font-weight: normal;
+	color: #444;
+	text-align: center;
+	margin: 2rem 0;
+  }
+
+  .title_cards span{
+	  color: #24cfaa;
+  }
+
+
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 80rem;
+}
+.cols {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.col {
+	width: calc(25% - 2rem);
+	margin: 1rem;
+	cursor: pointer;
+}
+.container {
+	//Instead of the line below you could use @include transform-style($style)
+	transform-style: preserve-3d;
+	//Instead of the line below you could use @include perspective($p)
+	perspective: 1000px;
+	&:hover {
+		.front {
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: rotateY(-180deg);
+			//Instead of the line below you could use @include transform-style($style)
+			transform-style: preserve-3d;
+		}
+		.back {
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: rotateY(0deg);
+			//Instead of the line below you could use @include transform-style($style)
+			transform-style: preserve-3d;
+		}
+	}
+	.back {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotateY(180deg);
+		//Instead of the line below you could use @include transform-style($style)
+		transform-style: preserve-3d;
+	}
+	.front {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotateY(0deg);
+		//Instead of the line below you could use @include transform-style($style)
+		transform-style: preserve-3d;
+	}
+}
+.front {
+	@extend %extend_1;
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		display: block;
+		opacity: .6;
+		background-color: $black;
+		//Instead of the line below you could use @include backface-visibility($visibility)
+		backface-visibility: hidden;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 10px;
+	}
+	.inner {
+		p {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+			position: relative;
+			color: #24cfaa;
+			&:after {
+				content: '';
+				width: 4rem;
+				height: 2px;
+				position: absolute;
+				background: $color_botticelli_approx;
+				display: block;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				bottom: -.75rem;
+			}
+		}
+		span {
+			color: $white_70;
+			font-family: $font_0;
+			font-weight: 300;
+		}
+	}
+}
+.back {
+	@extend %extend_1;
+	background: $color_botticelli_approx;
+	background: linear-gradient(45deg, $color_botticelli_approx 0,$color_nevada_approx 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.inner {
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateY(-50%) translateZ(60px) scale(0.94);
+	top: 50%;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 2rem;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	outline: 1px solid transparent;
+	//Instead of the line below you could use @include perspective($p)
+	perspective: inherit;
+	z-index: 2;
+	font-size: 20px;
+}
+@media screen and(max-width: 64rem) {
+	.col {
+		width: calc(33.333333% - 2rem);
+	}
+}
+@media screen and(max-width: 48rem) {
+	.col {
+		width: calc(50% - 2rem);
+	}
+}
+@media screen and(max-width: 32rem) {
+	.col {
+		width: 100%;
+		margin: 0 0 2rem 0;
 	}
 }

@@ -30,15 +30,19 @@ $url_0: url(/img/logo.jpg);
 	box-sizing: border-box;
 }
 body {
-	margin: 30px;
-	display: flex;
-	justify-content: space-around;
-	font-family: $font_0, $font_1;
-	font-weight: 700;
 	color: $color_dorado_approx;
 	background: $color_athens_gray_approx;
 }
+
+.body_all{
+	display: flex;
+	justify-content: space-around;
+	font-family: Lato, sans-serif;
+	font-weight: 700;
+	
+  }
 .login-div {
+	margin: 30px;
 	position: relative;
 	padding: 35px;
 	border-radius: 40px;
@@ -305,6 +309,7 @@ select::-ms-expand {
 	letter-spacing: 0.7px;
 }
 .table {
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -11,7 +11,7 @@ table-div {
   justify-content: center;
   align-items: center;
   margin: 100px;
-  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Montserrat, Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .content-table {
@@ -34,7 +34,7 @@ table-div {
 }
 .content-table thead tr {
   background-color: #009879;
-  color: #ffffff;
+  color: #fff;
   text-align: left;
   font-weight: bold;
 }
@@ -54,6 +54,7 @@ table-div {
 
 .home-button {
   margin: auto;
+  margin-top: 50px;
   text-align: center;
   width: 200px;
   padding: 16px 30px;
@@ -65,17 +66,161 @@ table-div {
   font-weight: 700;
   font-family: Lato, sans-serif;
   background: #009879;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
   transition: 0.5s;
 }
 .home-button a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 .home-button:hover {
   background-color: #24cfaa;
 }
 
+.back, .front {
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  background-position: center;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.title_cards {
+  font-size: 2.5rem;
+  font-family: "Montserrat";
+  font-weight: normal;
+  color: #444;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.title_cards span {
+  color: #24cfaa;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col {
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.container:hover .front {
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+.container:hover .back {
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+.container .back {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+.container .front {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+.front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  opacity: 0.6;
+  background-color: #000;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.front .inner p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #24cfaa;
+}
+.front .inner p:after {
+  content: "";
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #cedce7;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -0.75rem;
+}
+.front .inner span {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Montserrat;
+  font-weight: 300;
+}
+
+.back {
+  background: #cedce7;
+  background: linear-gradient(45deg, #cedce7 0, #596a72 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.inner {
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  perspective: inherit;
+  z-index: 2;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 64rem) {
+  .col {
+    width: calc(33.333333% - 2rem);
+  }
+}
+@media screen and (max-width: 48rem) {
+  .col {
+    width: calc(50% - 2rem);
+  }
+}
+@media screen and (max-width: 32rem) {
+  .col {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -83,16 +228,19 @@ table-div {
 }
 
 body {
-  margin: 30px;
-  display: flex;
-  justify-content: space-around;
-  font-family: Lato, sans-serif;
-  font-weight: 700;
   color: #555;
   background: #ecf0f3;
 }
 
+.body_all {
+  display: flex;
+  justify-content: space-around;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+}
+
 .login-div {
+  margin: 30px;
   position: relative;
   padding: 35px;
   border-radius: 40px;
