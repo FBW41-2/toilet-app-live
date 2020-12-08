@@ -16,8 +16,19 @@ async function getToilets() {
     let html = "";
 
     for (i = 0; i < list.length; i++) {
-      console.log(list[i]);
-      const data = list[i];
+      const data = {
+        ...list[i],
+        starRating() {
+          let stars = "";
+          for (i = 0; i < this.rating; i++) {
+            stars += "⭐ ";
+          }
+          return stars;
+        },
+      };
+
+      console.log("data", data);
+
       const {
         name,
         city,
@@ -26,9 +37,13 @@ async function getToilets() {
         streetnr: nr,
         stalls,
         rating,
+        starRating,
         [`feat-access`]: access,
         ...features
       } = data;
+
+      console.log("features", features);
+
       let featString = "";
       for (feat in features) {
         feat = feat.split("-")[1];
@@ -41,11 +56,13 @@ async function getToilets() {
           <div class="card-body">
             <h5 class="card-title text-center">WC in ${list[i].city}</h5>
             <ul class= "list-unstyled">
-            <li>Place: ${list[i].name}</li>
-            <li>Address: ${list[i].street}  ${list[i].streetnr}, ${list[i].zip} ${list[i].city}</li>
+            <li>Location: ${list[i].name}</li>
+            <li>Address: ${list[i].street}  ${list[i].streetnr}, ${
+        list[i].zip
+      } ${list[i].city}</li>
             <li> Available number of Stalls: ${list[i].stalls} </li>
             <li> Accessibility: ${access}
-            <li>Rating: ${list[i].rating}</li>
+            <li>Rating: ${data.starRating()}</li>
             <li>Features: ${featString}
     </li>
             
