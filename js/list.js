@@ -11,49 +11,35 @@ async function getToilets() {
         console.log(list)
         // get reference to <div id="list">
         const listDIV = document.getElementById("list")
-        
-        // add your code here
-        const html = `<div class="card"><h2>${list}</h2></div>`
 
-        newList(list)
-        function newList(data){
-            for (let index = 0; index < data.length; index++) {
-            var access = data[index]['feat-access'];
-            var mirror = data[index]['feat-mirror'];
-            var perfume = data[index]['feat-perfume'];
-            var papertowels = data[index]['feat-papertowels'];
-            var soap = data[index]['feat-soap'];
-            var baby = data[index]['feat-baby'];
-            var rating = data[index].rating;
-            
-            
-            var newData = 
-            `<div class="card"><h2>Location: ${data[index].name}</h2></div> 
-            <div class="card"><h2>City: ${data[index].city} ${data[index].zip}</h2></div>
-            <div class="card"><h2>Address: ${data[index].street} ${data[index].streetnr}</h2></div>
-            <div class="card"><h2>Stalls: ${data[index].stalls}</h2></div>
-            <div class="card"><h2>Access: ${access}</h2></div>
-            ${mirror ? '<div class="card"><h2>Mirror</h2></div>' : ""}
-            ${perfume ? '<div class="card"><h2>Perfume</h2></div>' : ""}
-            ${papertowels ? '<div class="card"><h2>Papertowels</h2></div>' : ""}
-            ${soap ? '<div class="card"><h2>Soap</h2></div>' : ""}
-            ${baby ? '<div class="card"><h2>Baby space</h2></div>' : ""}
-            ${rating ? '<div class="card"><h2>Rating</h2></div>' : ""}`
-              
-
-            listDIV.innerHTML += newData
-            
-            console.log(data[index])
-            }
-          
-            
-
-        }  
-     
-        // insert your html into referenced div
-    
-
+        newList(list, listDIV)
     } else {
         alert("List loading Error: " + response.status + " " + response.statusText + " " + response.url)
     }
+}
+
+function newList(data, listDIV){
+    for (let index = 0; index < data.length; index++) {
+        const toilet = data[index]                
+
+        listDIV.innerHTML += entry(toilet)
+        
+        console.log(data[index])
+    }
+}
+
+function entry({name, city, zip, street, streetnr:nr, stalls, ['feat-access']:access, rating, ...features}){
+    let featString = ""
+
+    for(feat in features) {
+        feat = feat.split("-")[1]
+        featString += `<div class="card"><h2>${feat[0].toUpperCase()}${feat.substr(1)}</h2></div>`
+    }
+    
+    return `<div class="card"><h2>Location: ${name}</h2></div> 
+    <div class="card"><h2>City: ${city} ${zip}</h2></div>
+    <div class="card"><h2>Address: ${street} ${nr}</h2></div>
+    <div class="card"><h2>Stalls: ${stalls}</h2></div>
+    <div class="card"><h2>Access: ${access}</h2></div>
+    ${featString}`
 }
