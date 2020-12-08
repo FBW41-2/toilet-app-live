@@ -371,9 +371,7 @@ select::-ms-expand {
 }
 
 .table {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   margin: 0 auto;
   margin-top: 10px;
   outline: none;

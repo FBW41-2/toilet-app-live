@@ -4,7 +4,9 @@
 	"description": "The published version of the toilet app",
 	"main": "index.js",
 	"scripts": {
-		"sass": "sass sass/main.scss css/style.css --watch"
+		"watch:styles": "sass sass/main.scss css/style.css --watch",
+		"start": "run-p watch watch:styles",
+		"watch": "live-server"
 	},
 	"repository": {
 		"type": "git",
@@ -15,5 +17,10 @@
 	"bugs": {
 		"url": "https://github.com/FBW41-2/toilet-app-live/issues"
 	},
-	"homepage": "https://github.com/FBW41-2/toilet-app-live#readme"
+	"homepage": "https://github.com/FBW41-2/toilet-app-live#readme",
+	"devDependencies": {
+		"npm-run-all": "latest",
+		"live-server": "latest",
+		"sass": "latest"
+	}
 }
