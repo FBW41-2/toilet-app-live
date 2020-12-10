@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -164,6 +165,7 @@ table-div {
   margin-bottom: 2rem;
   position: relative;
   color: #24cfaa;
+  font-weight: 900;
 }
 .front .inner p:after {
   content: "";
@@ -181,6 +183,8 @@ table-div {
   color: rgba(255, 255, 255, 0.7);
   font-family: Montserrat;
   font-weight: 300;
+  font-size: 12px;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 .back {
@@ -204,6 +208,7 @@ table-div {
   perspective: inherit;
   z-index: 2;
   font-size: 20px;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 @media screen and (max-width: 64rem) {

@@ -23,6 +23,7 @@ $color_botticelli_approx: #cedce7;
 $color_nevada_approx: #596a72;
 $black: #000;
 $white_70: rgba(255,255,255,0.7);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap');
 
 //fonts
 $font_0: Montserrat;
@@ -217,6 +218,8 @@ table-div {
 			margin-bottom: 2rem;
 			position: relative;
 			color: #24cfaa;
+			font-weight: 900;
+			
 			&:after {
 				content: '';
 				width: 4rem;
@@ -229,12 +232,15 @@ table-div {
 				margin: 0 auto;
 				bottom: -.75rem;
 				
+				
 			}
 		}
 		span {
 			color: $white_70;
 			font-family: $font_0;
 			font-weight: 300;
+			font-size: 12px;
+			font-family: 'Nanum Gothic', sans-serif;
 			
 		}
 	}
@@ -263,6 +269,9 @@ table-div {
 	perspective: inherit;
 	z-index: 2;
 	font-size: 20px;
+	font-family: 'Nanum Gothic', sans-serif;
+	
+	
 }
 @media screen and(max-width: 64rem) {
 	.col {
