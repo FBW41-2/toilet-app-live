@@ -80,7 +80,8 @@ table-div {
 }
 .home-button {
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 30px;
+	margin-bottom: 20px;
 	text-align: center;
 	width: 200px;
 	padding: 16px 30px;
@@ -227,12 +228,14 @@ table-div {
 				right: 0;
 				margin: 0 auto;
 				bottom: -.75rem;
+				
 			}
 		}
 		span {
 			color: $white_70;
 			font-family: $font_0;
 			font-weight: 300;
+			
 		}
 	}
 }

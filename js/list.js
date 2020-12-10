@@ -9,57 +9,52 @@ async function getToilets() {
         // converting from json to array, will wait until conversion is finished
         let list = await response.json()
         console.log(list)
-        // get reference to <div id="list">
         const listDIV = document.getElementById("list")
 
-        newList(list, listDIV)
-    } else {
-        alert("List loading Error: " + response.status + " " + response.statusText + " " + response.url)
+        for (i = 0; i < list.length; i++) {
+            list[i] = {
+            ...list[i],
+            starRating() {
+                    let stars = "";
+                    for (i = 0; i < this.rating; i++) {
+                        stars += "⭐ ";
+                    }
+                    return stars;
+                },
+            };
+        } 
+
+        let newData = "";
+        list.forEach(e => {
+
+            newData += "<div class='col' ontouchstart='this.classList.toggle('hover');'>"
+            newData += "<div class='container'>"
+            newData += "<div class='front' style='background-image: url(https://unsplash.it/500/500/)'>"
+            newData += "<div class='inner'>"
+            newData += "<p>" + e.city + "</p>"
+            newData += "<div class='card'>" + e.zip + "</div>"
+            newData += "<div class='card'>" + e.street + "," + e.streetnr + "</div>"
+            newData += "<div class='card'>" + e.name + "</div>"
+            newData += "<span>" + "Click For More InFo" + "</span>"
+            newData += "</div>"
+            newData += "</div>"
+            newData += "<div class='back'>"
+            newData += "<div class='inner'>"
+            newData += "<h3 class='card_h3'>" + e.name + "</h3>"
+            newData += "<div class='card'>" + e['feat-access'] + "</div>";
+            newData += e['feat-mirror'] ? "<div class='card'>" + "Mirror " + "</div>" : '';
+            newData += e['feat-baby'] ? "<div class='card'>" + "Baby " + "</div>" : '';
+            newData += e['feat-soap'] ? "<div class='card'>" + "Soap " + "</div>" : '';
+            newData += e['feat-perfume'] ? "<div class='card'>" + "perfume " + "</div>" : '';
+            newData += e['feat-papertowels'] ? "<div class='card'>" + "Papertowels " + "</div>" : '';
+            newData += "<div class='card'>" + e.starRating() + "</div>";
+            newData += "</div>"
+            newData += "</div>"
+            newData += "</div>"
+            newData += "</div>"
+        })
+            listDIV.innerHTML += newData
+            console.log(newData)
+
     }
 }
-
-function newList(data, listDIV){
-    for (let index = 0; index < data.length; index++) {
-        const toilet = data[index]                
-
-        listDIV.innerHTML += entry(toilet)
-        
-        console.log(data[index])
-    }
-}
-
-function entry({name, city, zip, street, streetnr:nr, stalls, ['feat-access']:access, rating, ...features}){
-    let featString = ""
-
-    for(feat in features) {
-        feat = feat.split("-")[1]
-        featString += `<div class="card">${feat[0].toUpperCase()}${feat.substr(1)}</div>`
-    }
-    
-    return `<div class="col" ontouchstart="this.classList.toggle('hover');">
-    <div class="container">
-        <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
-            <div class="inner">
-                <p>${city}</p>
-                <div class="card">Zip:  ${zip}</div>
-            <div class="card">Address : ${street} </div>
-            <div class="card">Street Nur: ${nr}</div>
-            <div class="card">Location : ${name}</div> 
-  <span>Click For InFo</span>
-            </div>
-        </div>
-        <div class="back">
-            <div class="inner">
-            
-            
-            <div class="card">Access : ${access}</div>
-            <div class="card">Stalls : ${stalls}</div>
-            ${featString}
-            <div class="card">Rating : ${rating}</div>
-            </div>
-        </div>
-    </div>
-</div>`
-} 
-            
-         
